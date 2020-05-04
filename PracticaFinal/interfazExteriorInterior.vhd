@@ -65,17 +65,17 @@ begin
 		if clk'event and clk = '1' then --flanco de subida 
 			if dir <= "8000" and we = '1' then 		-- en el caso de que se quiera escribir un dato, tanto de salida como en la ram
 				enableRamEscritura<= '1';
-			else if dir = "8001" and we = '1' then 
+			elsif dir = "8001" and we = '1' then 
 				salidaDisplay1 <= d_in;
-			else if dir = "8002" and we = '1' then
+			elsif dir = "8002" and we = '1' then
 				salidaDisplay1 <= d_in;
-			else if dir = "8003" and we = '1' then 
+			elsif dir = "8003" and we = '1' then 
 				salidaDisplay1 <= d_in;
-			else if dir = "8004" and we = '1' then
+			elsif dir = "8004" and we = '1' then
 				salidaDisplay1 <= d_in;
-			else if dir = "8001" and we = '1' then 
+			elsif dir = "8001" and we = '1' then 
 				salidaDisplay1 <= d_in;
-			else if dir<= "8000" and re = '1' then 
+			elsif dir<= "8000" and re = '1' then 
 				enableRamLectura <= '1';
 			else
 			enableRamLectura <= '0';
@@ -87,9 +87,9 @@ begin
 		begin
 		if dir <= "8000" and re ='1' then 
 			d_out<= salidaRam;
-		else if dir = "8005" and re = '1' then 
+		elsif dir = "8005" and re = '1' then 
 			d_out <= "000000000000000"&entradaBoton;
-		else if dir = "8006" and re = '1' then 
+		elsif dir = "8006" and re = '1' then 
 			d_out <= "00000000"&entradaNumero;
 		end if;
 	end process;
