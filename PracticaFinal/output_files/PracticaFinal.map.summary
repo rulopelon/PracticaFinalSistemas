@@ -1,0 +1,18 @@
+Analysis & Synthesis Status : Successful - Mon Apr 27 09:36:05 2020
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : PracticaFinal
+Top-level Entity Name : Micro2
+Family : Cyclone IV GX
+Total logic elements : 2,646
+    Total combinational functions : 2,522
+    Dedicated logic registers : 190
+Total registers : 190
+Total pins : 42
+Total virtual pins : 0
+Total memory bits : 1,024
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0

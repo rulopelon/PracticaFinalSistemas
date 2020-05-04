@@ -1,0 +1,17 @@
+
+State Machine - |Micro2|Control:iControl|estado_actual
+Name estado_actual.lw5 estado_actual.sw4 estado_actual.lw4 estado_actual.addi4 estado_actual.arit4 estado_actual.jalr3 estado_actual.lwsw3 estado_actual.addi3 estado_actual.beq3 estado_actual.arit3 estado_actual.lui3 estado_actual.decod estado_actual.fetch estado_actual.reset 
+estado_actual.reset 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+estado_actual.fetch 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+estado_actual.decod 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+estado_actual.lui3 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+estado_actual.arit3 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+estado_actual.beq3 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+estado_actual.addi3 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+estado_actual.lwsw3 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+estado_actual.jalr3 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+estado_actual.arit4 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+estado_actual.addi4 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+estado_actual.lw4 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+estado_actual.sw4 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+estado_actual.lw5 1 0 0 0 0 0 0 0 0 0 0 0 0 1 

@@ -1,0 +1,20 @@
+Fitter Status : Successful - Mon Apr 27 09:36:51 2020
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : PracticaFinal
+Top-level Entity Name : Micro2
+Family : Cyclone IV GX
+Device : EP4CGX22CF19C6
+Timing Models : Final
+Total logic elements : 2,560 / 21,280 ( 12 % )
+    Total combinational functions : 2,523 / 21,280 ( 12 % )
+    Dedicated logic registers : 190 / 21,280 ( < 1 % )
+Total registers : 190
+Total pins : 42 / 167 ( 25 % )
+Total virtual pins : 0
+Total memory bits : 1,024 / 774,144 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 80 ( 0 % )
+Total GXB Receiver Channel PCS : 0 / 4 ( 0 % )
+Total GXB Receiver Channel PMA : 0 / 4 ( 0 % )
+Total GXB Transmitter Channel PCS : 0 / 4 ( 0 % )
+Total GXB Transmitter Channel PMA : 0 / 4 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

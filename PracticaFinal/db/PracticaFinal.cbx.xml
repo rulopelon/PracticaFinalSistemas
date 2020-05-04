@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="PracticaFinal">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Micro2|ALU:iALU|MultiCon:MultiplicacionCon|lpm_mult:Mult0|mult_t9t:auto_generated|alt_mac_out:mac_out2" CBX_FILE_NAME="mac_out_kv82.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Micro2|ALU:iALU|MultiSin:MultiplicacionSin|lpm_mult:Mult0|mult_1ht:auto_generated|alt_mac_out:mac_out2" CBX_FILE_NAME="mac_out_kv82.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Micro2|ALU:iALU|SumadorRestador:SumRest|lpm_add_sub:Add2" CBX_FILE_NAME="add_sub_l3j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Micro2|ALU:iALU|MultiCon:MultiplicacionCon|lpm_mult:Mult0" CBX_FILE_NAME="mult_t9t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Micro2|ALU:iALU|MultiCon:MultiplicacionCon|lpm_mult:Mult0|mult_t9t:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_fdh1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Micro2|ALU:iALU|MultiSin:MultiplicacionSin|lpm_mult:Mult0" CBX_FILE_NAME="mult_1ht.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Micro2|ALU:iALU|MultiSin:MultiplicacionSin|lpm_mult:Mult0|mult_1ht:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_r2h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Micro2|ROM:iROM|altsyncram:memoria_rtl_0" CBX_FILE_NAME="altsyncram_dr71.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,113 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -12.183
+TNS   : -1179.595
+
+Type  : Slow 1200mV 85C Model Setup 'Control:iControl|estado_actual.lw4'
+Slack : -5.240
+TNS   : -77.206
+
+Type  : Slow 1200mV 85C Model Setup 'Control:iControl|estado_actual.sw4'
+Slack : -4.985
+TNS   : -3614.897
+
+Type  : Slow 1200mV 85C Model Hold 'Control:iControl|estado_actual.sw4'
+Slack : -0.240
+TNS   : -0.884
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Control:iControl|estado_actual.lw4'
+Slack : 1.146
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -195.174
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Control:iControl|estado_actual.sw4'
+Slack : 0.229
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Control:iControl|estado_actual.lw4'
+Slack : 0.416
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -10.810
+TNS   : -1041.707
+
+Type  : Slow 1200mV 0C Model Setup 'Control:iControl|estado_actual.lw4'
+Slack : -4.695
+TNS   : -69.257
+
+Type  : Slow 1200mV 0C Model Setup 'Control:iControl|estado_actual.sw4'
+Slack : -4.503
+TNS   : -3242.136
+
+Type  : Slow 1200mV 0C Model Hold 'Control:iControl|estado_actual.sw4'
+Slack : -0.132
+TNS   : -0.315
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.310
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Control:iControl|estado_actual.lw4'
+Slack : 1.165
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -195.174
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Control:iControl|estado_actual.sw4'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Control:iControl|estado_actual.lw4'
+Slack : 0.457
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -6.444
+TNS   : -613.165
+
+Type  : Fast 1200mV 0C Model Setup 'Control:iControl|estado_actual.lw4'
+Slack : -2.662
+TNS   : -39.683
+
+Type  : Fast 1200mV 0C Model Setup 'Control:iControl|estado_actual.sw4'
+Slack : -2.602
+TNS   : -1785.169
+
+Type  : Fast 1200mV 0C Model Hold 'Control:iControl|estado_actual.sw4'
+Slack : -0.119
+TNS   : -0.351
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Control:iControl|estado_actual.lw4'
+Slack : 0.686
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -199.355
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Control:iControl|estado_actual.sw4'
+Slack : 0.148
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Control:iControl|estado_actual.lw4'
+Slack : 0.373
+TNS   : 0.000
+
+------------------------------------------------------------
