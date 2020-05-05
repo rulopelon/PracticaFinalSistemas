@@ -6,7 +6,8 @@ generic(bits:integer:=16);
 port(
 	clk : in std_logic;
 	reset: in std_logic;
-	entradaPeriferico1,entradaPeriferico2,entradaPeriferico3,entradaPeriferico4,entradaPeriferico5,entradaPeriferico6,entradaPeriferico7,entradaPeriferico8: in std_logic; --entradas de los switches del periferico
+	entradaBoton : in std_logic;
+	entradaNumero: in std_logic_vector(7 downto 0); --entradas de los switches del periferico
 	salidaDisplay1,salidaDisplay2,salidaDisplay3,salidaDisplay4 : out std_logic_vector(7 downto 0));
 	end Micro2;
 architecture structural of Micro2 is
@@ -47,37 +48,44 @@ signal salidaMultiplexorperiferico: std_logic_vector(15 downto 0); 	--señal que
 	component Registro 
 	generic(bits : integer:= 16);
 	port(
-	entrada : in std_logic_vector(bits-1 downto 0);
-	enable:in  std_logic;
-	salida : out std_logic_vector(bits-1 downto 0);
-	clk,reset : in std_logic);
+		entrada : in std_logic_vector(bits-1 downto 0);
+		enable:in  std_logic;
+		salida : out std_logic_vector(bits-1 downto 0);
+		clk,reset : in std_logic);
 	end component;
 	
-	component RAM 
-	generic( palabras: integer:= 64);
-	port (
-	d_in : in std_logic_vector (15 downto 0);
-	dir : in std_logic_vector (15 downto 0);
-	re : in std_logic ; -- Read enable
-	we : in std_logic ; -- Write enable
-	d_out : out std_logic_vector (15 downto 0));
+	component interfazExteriorInterior 
+	port(
+		d_in : in std_logic_vector (15 downto 0);
+		dir : in std_logic_vector (15 downto 0);
+		re : in std_logic ; -- Read enable
+		we : in std_logic ; -- Write enable
+		d_out : out std_logic_vector (15 downto 0);
+		clk : in std_logic;
+		entradaBoton :in std_logic;
+		entradaNumero :in std_logic_vector(7 downto 0);
+		salidaDisplay1: out std_logic_vector(15 downto 0);
+		salidaDisplay2: out std_logic_vector(15 downto 0);
+		salidaDisplay3: out std_logic_vector(15 downto 0);
+		salidaDisplay4: out std_logic_vector(15 downto 0)
+		);
 	end component;
 	
 	component Multiplexor4 
 	generic(bits: integer:= 16);
 	port(
-	entrada1,entrada2,entrada3,entrada4 :in std_logic_vector(bits-1 downto 0);
-	salida : out std_logic_vector(bits-1 downto 0);
-	selector :in std_logic_vector(1 downto 0));
+		entrada1,entrada2,entrada3,entrada4 :in std_logic_vector(bits-1 downto 0);
+		salida : out std_logic_vector(bits-1 downto 0);
+		selector :in std_logic_vector(1 downto 0));
 	end component;
 	
 	component Multiplexor2 
 	generic(
 	bits : integer:= 16);
 	port(
-	entrada1,entrada2:in std_logic_vector(bits-1 downto 0);
-	salida : out std_logic_vector(bits-1 downto 0);
-	selector :in std_logic);
+		entrada1,entrada2:in std_logic_vector(bits-1 downto 0);
+		salida : out std_logic_vector(bits-1 downto 0);
+		selector :in std_logic);
 	end component;
 	
 	component Control
@@ -123,7 +131,6 @@ begin
 
 enPc <=wr_PC or (wr_PC_cond and z);
 PC <= "0000000000000000";
-signalPeriferico<= "00000000" &entradaPeriferico1 & entradaPeriferico2 &entradaPeriferico3 &entradaPeriferico4 &entradaPeriferico5 &entradaPeriferico6 &entradaPeriferico7 & entradaPeriferico8;
 
 irControl<= salida_ir(3 downto 0);
 	Muliplexor_PC:Multiplexor4
@@ -229,15 +236,22 @@ irControl<= salida_ir(3 downto 0);
 			salida=>ALUOut,
 			clk=>clk,
 			reset=>reset);
-	iRAM:RAM
-		generic map(palabras=>64)
+			
+	iRAM:interfazExteriorInterior
 		port map(
 			d_in =>RegB,
 			dir =>ALUOut,
 			re=>rd_mem_d,
 			we=>wr_mem_d,
-			d_out=>Mdatos );
-			
+			d_out=>Mdatos,
+			clk=> clk,
+			entradaBoton => entradaBoton,
+			entradaNumero => entradaNumero,
+			salidaDisplay1=>salidaDisplay1,
+			salidaDisplay2=> salidaDisplay2,
+			salidaDisplay3=>salidaDisplay3,
+			salidaDisplay4=> salidaDisplay4);
+				
 	codop <= salida_ir(15 downto 13);
 	iControl:Control
 		port map(

@@ -1,3 +1,6 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 --este componente va a sustituir a la ram, puesto que va a tener una ram dentro así como los registros que permiten la entrada y salida de datos desde los perifericos
 --DIRECCIONES:
@@ -18,10 +21,10 @@ entity interfazExteriorInterior is
 		clk : in std_logic;
 		entradaBoton :in std_logic;
 		entradaNumero :in std_logic_vector(7 downto 0);
-		salidaDiplay1: out std_logic_vector(15 downto 0);
-		salidaDiplay2: out std_logic_vector(15 downto 0);
-		salidaDiplay3: out std_logic_vector(15 downto 0);
-		salidaDiplay4: out std_logic_vector(15 downto 0)
+		mierda: out std_logic_vector(7 downto 0);
+		mierda1: out std_logic_vector(7 downto 0);
+		mierda2: out std_logic_vector(7 downto 0);
+		mierda3: out std_logic_vector(7 downto 0)
 	);
 	end interfazExteriorInterior;
 	
@@ -60,25 +63,23 @@ begin
 			we=>enableRamEscritura,
 			d_out=>salidaRam );
 			
-	asignacion:process(clk,dir)
+	asignacion:process(clk)
 		begin
 		if clk'event and clk = '1' then --flanco de subida 
 			if dir <= "8000" and we = '1' then 		-- en el caso de que se quiera escribir un dato, tanto de salida como en la ram
 				enableRamEscritura<= '1';
 			elsif dir = "8001" and we = '1' then 
-				salidaDisplay1 <= d_in;
+				salidaDisplay1 <= d_in(7 downto 0);
 			elsif dir = "8002" and we = '1' then
-				salidaDisplay1 <= d_in;
+				salidaDisplay1 <= d_in(7 downto 0);
 			elsif dir = "8003" and we = '1' then 
-				salidaDisplay1 <= d_in;
+				salidaDisplay1 <= d_in(7 downto 0);
 			elsif dir = "8004" and we = '1' then
-				salidaDisplay1 <= d_in;
+				salidaDisplay1 <= d_in(7 downto 0);
 			elsif dir = "8001" and we = '1' then 
-				salidaDisplay1 <= d_in;
+				salidaDisplay1 <= d_in(7 downto 0);
 			elsif dir<= "8000" and re = '1' then 
 				enableRamLectura <= '1';
-			else
-			enableRamLectura <= '0';
 			end if;
 		end if;
 	end process asignacion;
